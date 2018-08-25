@@ -1,22 +1,43 @@
+<!--
+  This is a template for index.html.
+  It uses ejs and htmlWebpackPlugin to generate
+  different index.html for each environment.
+-->
+
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <h1>Users</h1>
-    <table>
-      <thead>
-        <th>&nbsp;</th>
-        <th>Id</th>
-        <th>First name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-      </thead>
-      <tbody id="users">
 
-      </tbody>
-    </table>
-    <script src="bundle.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+    <!-- BEGIN TRACKERJS -->
+    <script>
+      window._trackJs = {
+        token: "30161457708f4628953ea8a69805553e"
+      };
+    </script>
+    <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- BEGIN TRACKERJS -->
+  <% } %>
+</head>
+
+<body>
+  <!-- users -->
+  <h1>Users</h1>
+  <table>
+    <thead>
+      <th>&nbsp;</th>
+      <th>Id</th>
+      <th>First name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </thead>
+    <tbody id="users">
+
+    </tbody>
+  </table>
+
+</body>
+
 </html>
