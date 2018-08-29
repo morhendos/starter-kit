@@ -1,6 +1,6 @@
 /* this file contains references to the vendor libraries
 of this project. This is used by webpack in the production
-build only for bundly splitting */
+build only for bundle splitting */
 
 /* eslint-disable no-unused-vars */
 
